@@ -1,0 +1,264 @@
+*{
+    box-sizing: border-box; /*sirve para que las cosas no crezcan mas de los devido*/
+}
+
+body {
+    background-color: #F5F1E8;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2em; color: #0F4C81;}
+h3{font-size: 2.5em;}
+p{font-size: 0.9em;}
+.color_diferente{color: rgba(255, 68, 0, 0.829);}
+
+button{
+    font-size: 1.2em;
+    font-weight: bold; /*negrita*/
+    padding: 10px 50px; /*tamaño de la cajita*/
+    border-radius: 10px; /*bordes*/
+    border: 2px solid rgba(32, 25, 25, 0.616);
+    text-align: center;
+}
+
+button:hover{
+    background-color: rgb(135, 182, 243);
+}
+
+.separador{
+    margin:0 auto;
+    width: 90%;
+    height: 20px;
+    background-color: #10B981;
+}
+
+.contenedor{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header .logo{
+    margin: 0;
+    width: 50%; /*ancho maximo del contenedor*/
+    max-width: 700px;
+    height: auto; /*alto maximo del contenedor*/
+}
+
+header .contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+}
+
+@media (max-width:1000px)
+    {
+        header nav{
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+    }
+
+header a{
+    padding: 5px 13px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: rgba(179, 92, 70, 0.514);
+}
+
+#banner{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)), url("../../imagenes/Banner\ travel.png");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover; /*Haz que la imagen cubra completamente todo el banner, aunque tengas que recortar partes.*/
+    background-position: center center; /*De la imagen recortada, quiero mostrar la parte central.*/
+} 
+
+#Que_conviene{
+    padding:20px 0;
+}
+
+#Que_conviene .contenedor {
+    width: 50%;
+    margin: auto;
+}
+
+.imagen_que_conviene{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.Peru_01{
+    max-width: 200px;
+    width: auto;    
+    border: none;
+    border-radius: 15px;
+}
+
+.texto_que_conviene{
+    flex: 1;
+}
+.texto_que_conviene h2 {
+    margin: 0 0 10px 0;
+}
+
+.texto_que_conviene p {
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+
+    .imagen_que_conviene {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+#buscas_reto{
+    padding:20px 0;
+}
+
+#buscas_reto .contenedor {
+    width: 50%;
+    margin: auto;
+}
+
+.imagen_buscas_reto{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.Peru_02{
+    max-width: 200px;
+    width: auto;    
+    border: none;
+    border-radius: 15px;
+}
+
+.texto_buscas_reto{
+    flex: 1;
+}
+.texto_buscas_reto h2 {
+    margin: 0 0 10px 0;
+}
+
+.texto_buscas_reto p {
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+
+    .imagen_buscas_reto {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+/*width es ancho y heigth alto
+width  → qué tan ANCHA es la caja
+height → qué tan ALTA es la caja
+padding → espacio DENTRO de la caja
+margin → espacio FUERA de la caja
+display: flex → cómo se ORGANIZAN los hijos*/
+
+#estilos_viajes {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#estilos_viajes .contenedor{
+    padding:50px 12px;
+}
+
+#estilos_viajes .h3{
+    margin-top: 0;
+}
+
+
+#estilos_viajes .estilos {
+    background-position: center center;
+    background-size: cover;
+    padding: 70px;
+    margin: 20px;
+    border-radius: 10px;
+
+}
+
+/*usare una forma de llamar a div del mismo class que estan dentro de un contenedor*/
+
+.estilos:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)), url("../../imagenes/Cultura\ e\ historia.png");
+}
+
+.estilos:nth-child(2) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)), url("../../imagenes/Rafting.jpg");
+}
+
+.estilos:nth-child(3) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)), url("../../imagenes/Trekkinkg.jpg");
+}
+
+.estilos:nth-child(4) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)), url("../../imagenes/Gastronimia.jpg");
+}
+
+footer .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    margin: auto;
+    padding: 5px 0;
+}
+
+.redessociales{
+    display: flex;
+    gap: 5px;
+}
+
+.redessociales img {
+    width: 50px;
+    height: 50px;
+}
